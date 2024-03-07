@@ -1,0 +1,58 @@
+@charset "UTF-8"
+body{
+    font-family: Arial, Helvetica, sans-serif; /*se não tiver uma usa a outra (é dizer: se não achar essas fontes, usa uma sem serifa genérica que vc tiver)*/
+
+    font-size: 20px;
+
+    /*
+    Medidas Absolutas:
+    cm, mm, in, px, pt, pc
+
+    Medidas Relativas
+    em, ex, rem, vw, vh, %
+
+    Recomendação W3C é usar pixel ou altura do m (px;em) - 16px = 1 em
+    */
+
+    
+    
+
+
+}
+p{
+    font-weight: bold;
+    /* tamanhos/weight: lighter; normal; bold; bolder*/
+
+    /* weight (peso); width (largura); height (altura)*/
+
+
+
+    
+    
+    /*
+    SHORTHAND font
+    
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 1em;
+    font-style:italic;
+
+    ao invés de usar isso, basta usar font: (ordem: font-style -> font-weight -> font-size -> font-family)
+     */
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight:bold;
+     font-size: 1em;
+     font-style:italic;
+
+     ou
+
+     font: italic bold 1em arial ;
+
+   
+}
+
+h1, h2{
+    font-family:'Times New Roman', Times, serif;
+    
+}

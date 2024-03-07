@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 
+    em HTML é id = em CSS é # (id é único elemento)
+    em HTML é class = em CSS é . (class é para multiplos elementos e pode ter mais de uma class por tag)
+    obs:segurar ALT para escrever em mais de um lugar
+    obs 2: Tag span serve para selecionar uma parte, assim pode colocar class.
+*/
+body{
+    background-color: rgba(127, 255, 212, 0.452);
+}
+h1{
+    color: rgba(19, 37, 31, 0.767);
+}
+h1#principal{
+    text-align: center;
+    background-color: rgba(33, 65, 54, 0.452);
+    color: white;
+    border-radius: 20px;
+
+}
+h2{
+    color: rgba(65, 133, 91, 0.767);
+}
+.basico{
+    color: rgba(65, 133, 91, 0.767);
+}
+.intermediario{
+    color: rgba(224, 201, 98, 0.767);
+}
+.avancado{
+    color: rgba(184, 76, 43, 0.767);
+}
+.destaque{
+    background-color: rgba(212, 196, 51, 0.534);
+}

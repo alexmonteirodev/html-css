@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos localmente</h1>
+        <p>esse vídeos está hospedado no meu próprio servidor.</p>
+        <p>Forma simples(<strong>FACIL</strong>):</p>
+
+        <video src="midia/Meu-Video2.mp4" width="500" controls></video>
+
+        <p>para ser mais <strong>COMPLETO</strong>, é melhor colocar todos os videos com as extensões diferentes para que eles abram em qualquer navegador (assim como nas fotos):</p>
+
+        <video width="500" controls poster="imagens/Paisagem-650.jpg" autoplay loop> <!--poster se usa para colocar capa no vídeo-->
+            <source src="midia/Meu-Video2.mp4" type="video/mp4">
+            <source src="midia/Meu-Video.mkv" type="video/mkv">
+            <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+        </video>
+        <!--nessa ordem porque o hmtl vai respeitar essa ordem, por isso a mensagem de que "o video não é compatível" está embaixo, porquie é em último caso caso não abra nenhum vídeo-->
+
+    <h1>Inserindo videos externos/do youtube (<stron>BARATA</stron>)</h1>
+        <p>ctrl v do "incorporar copiado em compartilhar do video do youtube (ao fazer isso o cliente vai consumir dados do servidor do youtube e não do seu. Além de abrangir o algoritmo do google por conta de ter um video do youtube em seu site, porque o segundo maior buscador do mundo é o youtube, além de ser uma estética familiar para o cliente)"</p>
+
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/21mDekTZwsw?si=suMUEtpv1tto9WWv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+        <p>tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+        <picture>
+            <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+            <img src="imagens/foto-g.png" alt="imagem flexível">
+            <!--colocar 50px a mais que é a barra de rolagem, tem que seguir essa ordem, da maior para a menor (subindo)-->
+        </picture>
+
+    <h1>Audio</h1>
+        <p>Usando audio em HTML 5. Tem duas maneiras:</p>
+        <ol>
+            <li>mais simples</li>
+            <li>mais completa</li>
+        </ol>
+        <p>1. mais simples (usa tag audio e seleciona a midia e add controls e autoplay):</p>
+        <audio src="midia/torison.mp3" controls autoplay></audio>
+
+        <p>2. ou a mais completa que serve para mais navegadores (usa a tag audio, apaga o source e reescreve (fora da tag) buscando por source src) e se usa os 3 formatos (mpeg, ogg e wav para que caso o navegador não abra em um, tente abrir em outro formato e é importante seguir a sequencia):</p><!--no material em pdf existem vários "types" para cada tipo de audio, tem que ver na lista qual é o seu (pode ser /mpeg (para mp3); ogg ou wav)-->
+        <audio preload="metadata"><!--metadata é para carregar quando a pessoa for ouvir e não pesar para abrir o site-->
+            <source src="midia/torison.mp3" type="audio/mpeg">
+            <source src="midia/torison.mp3" type="audio/ogg">
+            <source src="midia/torison.mp3" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/torison.mp3">Clique aqui para baixar o arquico MP3</a></p> <!--uma alternativa para quando o audio não carregue é deixar o link para download-->
+        </audio>
+    
+</body>
+</html>
