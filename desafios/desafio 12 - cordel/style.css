@@ -7,13 +7,13 @@
 *{
     margin: 0%;
     padding: 0%;
-
 }
 :root{
     --font-family1: "Passion One", sans-serif;
     --font-family2: "Sriracha", sans-serif;
     --black: black;
     --white: white;
+    --transparente: rgba(1, 1, 1, 0.166);
 }
 body{
     background-color: gray;
@@ -21,26 +21,23 @@ body{
 header{
     background-color: var(--black);
     height: 25vw;
-
 }
 header>h1{
-    color: white;
+    color: var(--white);
     font-family: var(--font-family1);
     font-weight:700;
     font-size: 10vw;
     text-align: center;
-    padding-top: 6.5vh;
-    
-
+    padding-top: 50px;
 }
 header>p{
     color: var(--white);
     text-align: center;
     font-size: 2vw;
+    padding-bottom: 50px;
     
 }
-
-header>p>a{
+a{
     color: var(--white);
     text-decoration: none;
     font-family: Verdana, Tahoma, sans-serif;
@@ -48,8 +45,54 @@ header>p>a{
     font-size: 2vw;
     
 }
-header>p>a:hover{
+a:hover{
     text-decoration: underline;
     color: var(--white);
 }
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em; /*espaçamento entre linhas*/
+    font-family: var(--font-family2);
+    font-size: 3vw;
+    
+}
+.normal{
+    background-color: var(--white);
+    color: var(--black);
+}
 
+.imagem{
+    background-color: gray;
+    color: white;
+}
+
+.imagem>p{
+    background-color: var(--transparente);
+    display: inline-block; /*serve para o box/div se ajusar ao tamanho do conteudo. nesse caso, como o P é em vw e se ajusta ao tamanho da tela, se usasse a medida de px ele ia quebrar em algum momento e no inlineblock, ele vai se ajudar ao tamanho do P*/
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: var(--black);
+    text-align: center;
+    color: var(--white);
+    padding: 10px;
+}
