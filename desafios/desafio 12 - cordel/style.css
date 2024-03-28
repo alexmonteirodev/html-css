@@ -34,16 +34,14 @@ header>p{
     color: var(--white);
     text-align: center;
     font-size: 2vw;
-    padding-bottom: 50px;
-    
+    padding-bottom: 50px; 
 }
 a{
     color: var(--white);
     text-decoration: none;
     font-family: Verdana, Tahoma, sans-serif;
     font-weight: bold;
-    font-size: 2vw;
-    
+    font-size: 2vw; 
 }
 a:hover{
     text-decoration: underline;
@@ -58,38 +56,36 @@ section{
     font-size: 3vw;
     
 }
+section > p{
+    padding-bottom: 2em;
+}
 .normal{
     background-color: var(--white);
     color: var(--black);
 }
-
 .imagem{
     background-color: gray;
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.426);
+    background-attachment: fixed; /*assim se faz o efeito --PARALAX--  */
 }
-
 .imagem>p{
     background-color: var(--transparente);
     display: inline-block; /*serve para o box/div se ajusar ao tamanho do conteudo. nesse caso, como o P é em vw e se ajusta ao tamanho da tela, se usasse a medida de px ele ia quebrar em algum momento e no inlineblock, ele vai se ajudar ao tamanho do P*/
     padding: 10px;
     border-radius: 5px;
-
+    text-shadow: 1px 2px 2px black; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#img01{
+    background-image: url("imagens/background001.jpg");
+    background-position: right center;
+    background-size: cover; /*cover a imagem vai se adequar ao tamanho da tela*/
+}
+#img02{
+    background-image: url("imagens/background002.jpg");
+    background-position: right center;
+    background-size: cover;
+}
 footer{
     background-color: var(--black);
     text-align: center;
