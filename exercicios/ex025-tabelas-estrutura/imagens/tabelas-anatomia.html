@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
     <style>
+        body{
+            height: 300vh;
+        }
         table{
             width: 500px;
-            border-collapse: collapse;            
+            border-collapse: collapse;
+            position: relative; /*primeiro passo para fazer a tabela grudar no topo da pagina ao descer o scroll*/ 
+        }
+        thead > tr > th { /*segundo passo para fazer a tabela grudar no topo da     pagina ao descer o scroll*/
+            position: sticky;
+            top: 0;
+            background-color: gray;
         }
         td,th{
             border: 1px solid black;
