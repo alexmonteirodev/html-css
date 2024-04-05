@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas responsivas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid black;
+            width: 100px;
+            padding: 10px;
+        }
+        tr:nth-child(even){
+            background-color: rgba(189, 188, 188, 0.698);
+        }
+        #tabela{
+            overflow-x: auto; /*overflow = conteudo que transborda*/
+        }
+    </style>
+</head>
+<!--Se diminuir a tela... vai chegar a hora em que a tabela vai ficar pequena e a pagina vai ganhar uma rolagem lateral e para que isso não aconteça, tem que envelopar toda a tabela e usar o overflow x -->
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus ullam? Quam qui quidem fugit rerum! Iste, recusandae quaerat aliquam assumenda modi ullam non quasi reprehenderit hic tempore ducimus. Aut?</p>
+    
+    <div id="tabela">
+        <table>
+            <caption>Tabelas reponsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>jan</th>
+                    <th>fev</th>
+                    <th>març</th>
+                    <th>abr</th>
+                    <th>maio</th>
+                    <th>jun</th>
+                    <th>julh</th>
+                    <th>agosto</th>
+                    <th>set</th>
+                    <th>out</th>
+                    <th>nov</th>
+                    <th>dec</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>tv 40'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 50'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 60'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 70'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 80'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 90'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>tv 100'</td>
+                    <td>12</td>
+                    <td>21</td>
+                    <td>45</td>
+                    <td>01</td>
+                    <td>23</td>
+                    <td>01</td>
+                    <td>41</td>
+                    <td>13</td>
+                    <td>01</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>101</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
