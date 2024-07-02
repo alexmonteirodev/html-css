@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --icewhite: #F0F0F0;
+    --white: #FFFFFF;
+    --purple: #864CFF;
+    --black: #151515;
+    --grey: #8C8C8C;
+    --inputcolor: #88888858;
+    --errorcolor: #F0686C;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--icewhite);
+    font-family: "Poppins", sans-serif;
+}
+header{
+    margin-bottom: 30px;
+}
+main{
+    
+}
+section{
+    border: #151515;
+    background-color: var(--white);
+    width: 800px;
+    border-radius: 25px 25px 150px 25px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.091);
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    color: var(--grey);
+}
+.legends{
+    margin-bottom: 5px;
+    margin-top: 30px;
+    font-weight: lighter 300;
+}
+.textarea{
+    width: 100px;
+    border: 1px solid var(--inputcolor);
+    border-radius: 5px;
+    height: 60px;
+    width: 140px;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+#div1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-left: 50px;
+}
+.error{
+    margin-top: 5px;
+    color: var(--errorcolor);
+    display: none;
+    font-style: italic;
+    font-size: 0.8em;
+}
+#div2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+hr{
+    margin-left: 50px;
+    background-color: var(--inputcolor);
+    height: 2px;
+    border: 0px solid var(--inputcolor);
+    width: 100%;
+}
+button{
+    border-radius: 100px;
+    width: 150px;
+    height: 110px;
+    margin-right: 50px;
+    background-color: var(--purple);
+    border: none;
+}
+.resultinput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.result{
+    color: var(--purple);
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0px;
+
+}
+.legendsresults{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 6em;
+    margin: 0px;
+}
+#div3{
+    margin-left: 50px;
+}
