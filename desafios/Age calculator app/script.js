@@ -1,9 +1,9 @@
 var button = document.getElementById('btn')
 var date = new Date()
 var actualyear = date.getFullYear()
-var actualmonth = date.getMonth()
-var actualday = date.getDay()
-// window.alert(actualmonth + 1)
+var actualmonth = date.getMonth() + 1
+var actualday = date.getDate()
+
 
 button.addEventListener('click',calcular)
 
@@ -15,7 +15,6 @@ function calcular(params) { //variaveis dentro da function para captar o numero 
     var textarea = document.querySelectorAll('.textarea')
     var label = document.querySelectorAll('.legends')
     var result = document.querySelectorAll('.result')
-    
 
     //obs: por ser uma estrutura else if ela segue a ordem, dia, mes e ano, entao se preencher um dado antes do outro o erro aparece no de antes se não quiser que isso aconteca é melhor fazer o if separado para cada um (ex: ao escrever o dia e mes errado e apertar no botao ele nao mostra que o mes tbm esta errado porque ainda esta lendo e o dia vem antes do mes )
 
@@ -80,24 +79,32 @@ if (year <= 0 || year > actualyear) {
     label[2].innerHTML = 'Year'
     // result[0].innerHTML = (actualyear-1) - year
 }
-if (actualday < day) { // year
-    result[0].innerHTML = (actualyear-1) - year
-} else {
-    result[0].innerHTML = (actualyear) - year
+if (actualday < day && actualmonth > month) { // YEAR
+    result[0].innerHTML = actualyear - year
+} else { // fez niv
+    result[0].innerHTML = (actualyear - year) - 1
+}
+//FAZER A PARTIR DAQUI-----------------------------------------------------
+if (actualmonth < month) { //MONTH actualmonth < month && day < actualday
+    result[1].innerHTML = ((actualmonth - 12) -1 )+ month
+} else { //fez niv
+    result[1].innerHTML = (actualmonth - month) -1
+    // if ((actualmonth - month) -1 == -1) {
+    //     result[1].innerHTML = 365 - 
+    // }
 }
 
-
-if (actualmonth < month) { //month actualmonth < month && day < actualday
-    result[1].innerHTML = (12 - month) + (actualmonth)
+if (actualday <= day) { //DAYS loop dos meses que ja passaram somando os ultimos dias de cada mes + dia atual
+    result[2].innerHTML = actualday + (30 - day)
 } else {
-    result[1].innerHTML = actualmonth - month
+    result[2].innerHTML = actualday
 }
 }
 
 
 //tudo
-if (condition) {
+// if (condition) {
     
-} else {
+// } else {
     
-}
+// }
