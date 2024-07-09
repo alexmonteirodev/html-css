@@ -69,7 +69,7 @@ if (month <= 0 || month >= 13) { // month error
 if (year <= 0 || year > actualyear) {
     error[2].style.display = 'block' //none para sumir e block para aparecer
     textarea[2].style.border = '1px solid #F0686C'
-    label[2].innerHTML = 'Month*'
+    label[2].innerHTML = 'Year*'
     label[2].style.color = '#F0686C'
     result[0].innerHTML = '--'
 } else {
