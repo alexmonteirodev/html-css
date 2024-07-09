@@ -84,7 +84,7 @@ if (actualday < day && actualmonth > month) { // YEAR
 } else { // fez niv
     result[0].innerHTML = (actualyear - year) - 1
 }
-//FAZER A PARTIR DAQUI-----------------------------------------------------
+//FAZER q A PARTIR DAQUI-----------------------------------------------------
 if (actualmonth < month) { //MONTH actualmonth < month && day < actualday
     result[1].innerHTML = ((actualmonth - 12) -1 )+ month
 } else { //fez niv
