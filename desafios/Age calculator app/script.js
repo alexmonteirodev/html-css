@@ -43,7 +43,7 @@ if (day <= 0 || day >= 32) { // day error (para dar erro)
     textarea[0].style.border = '1px solid var(--errorcolor)'
     label[0].style.color = 'var(--errorcolor)'
     label[0].innerHTML = 'Day*'
-    result[2].innerHTML = '--'
+    result[0].innerHTML = 'teste'
 } else {
     error[0].style.display = 'none'
     textarea[0].style.border = '1px solid var(--inputcolor)'
@@ -71,7 +71,7 @@ if (year <= 0 || year > actualyear) {
     textarea[2].style.border = '1px solid #F0686C'
     label[2].innerHTML = 'Year*'
     label[2].style.color = '#F0686C'
-    result[0].innerHTML = '--'
+    result[2].innerHTML = '--'
 } else {
     error[2].style.display = 'none'
     textarea[2].style.border = '1px solid var(--inputcolor)'
@@ -79,32 +79,28 @@ if (year <= 0 || year > actualyear) {
     label[2].innerHTML = 'Year'
     // result[0].innerHTML = (actualyear-1) - year
 }
-if (actualday < day && actualmonth > month) { // YEAR
+if (day == '' || month == '' || year == '') { // YEAR
+    result[0].innerHTML = '--'
+} else if (actualday < day && actualmonth > month) {
     result[0].innerHTML = actualyear - year
-} else { // fez niv
+} else {
     result[0].innerHTML = (actualyear - year) - 1
 }
-//FAZER q A PARTIR DAQUI-----------------------------------------------------
-if (actualmonth < month) { //MONTH actualmonth < month && day < actualday
-    result[1].innerHTML = ((actualmonth - 12) -1 )+ month
-} else { //fez niv
+
+if (day == '' || month == '' || year == '') { // MONTH
+    result[1].innerHTML = '--'
+} else if (month == actualmonth) {
+    result[1].innerHTML = 0
+} else if (actualmonth < month) {
+    result[1].innerHTML = (12 - month) + (actualmonth - 1)
+} else {//fez niv
     result[1].innerHTML = (actualmonth - month) -1
-    // if ((actualmonth - month) -1 == -1) {
-    //     result[1].innerHTML = 365 - 
-    // }
 }
 
+//FAZER q A PARTIR DAQUI-----------------------------------------------------
 if (actualday <= day) { //DAYS loop dos meses que ja passaram somando os ultimos dias de cada mes + dia atual
     result[2].innerHTML = actualday + (30 - day)
 } else {
     result[2].innerHTML = actualday
 }
 }
-
-
-//tudo
-// if (condition) {
-    
-// } else {
-    
-// }
