@@ -4,7 +4,6 @@ var actualyear = date.getFullYear()
 var actualmonth = date.getMonth() + 1
 var actualday = date.getDate()
 
-
 button.addEventListener('click',calcular)
 
 function calcular(params) { //variaveis dentro da function para captar o numero na hora do evento se botar antes vai dar 0 porque não tem nada nela
@@ -98,9 +97,22 @@ if (day == '' || month == '' || year == '') { // MONTH
 }
 
 //FAZER q A PARTIR DAQUI-----------------------------------------------------
-if (actualday <= day) { //DAYS loop dos meses que ja passaram somando os ultimos dias de cada mes + dia atual
-    result[2].innerHTML = actualday + (30 - day)
-} else {
-    result[2].innerHTML = actualday
+// if (actualday <= day) { //DAYS loop dos meses que ja passaram somando os ultimos dias de cada mes + dia atual
+//     result[2].innerHTML = actualday + (30 - day)
+// } else {
+//     result[2].innerHTML = actualday
+// }
+if (day == '' || month == '' || year == '') { // Day
+    result[2].innerHTML = '--'
+} else if ([1,3,5,7,8,10,12].includes(month)) { //31
+    var first = result[2].innerHTML = (31 - day) + actualday
+} else if ([4,6,9,11].includes(month)) { //30
+    var second = result[2].innerHTML = (30 - day) + actualday
+} else {//fev
+    var third = result[2].innerHTML = (29 - day) + actualday
 }
+
+// if (first == 31 || second == 30 || third == 29) {
+//     result[0].innerHTML += 1
+// } 
 }
