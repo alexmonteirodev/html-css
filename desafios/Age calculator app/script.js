@@ -14,6 +14,7 @@ function calcular(params) { //variaveis dentro da function para captar o numero 
     var textarea = document.querySelectorAll('.textarea')
     var label = document.querySelectorAll('.legends')
     var result = document.querySelectorAll('.result')
+    
 
     //obs: por ser uma estrutura else if ela segue a ordem, dia, mes e ano, entao se preencher um dado antes do outro o erro aparece no de antes se não quiser que isso aconteca é melhor fazer o if separado para cada um (ex: ao escrever o dia e mes errado e apertar no botao ele nao mostra que o mes tbm esta errado porque ainda esta lendo e o dia vem antes do mes )
 
@@ -96,23 +97,36 @@ if (day == '' || month == '' || year == '') { // MONTH
     result[1].innerHTML = (actualmonth - month) -1
 }
 
-//FAZER q A PARTIR DAQUI-----------------------------------------------------
-// if (actualday <= day) { //DAYS loop dos meses que ja passaram somando os ultimos dias de cada mes + dia atual
-//     result[2].innerHTML = actualday + (30 - day)
-// } else {
-//     result[2].innerHTML = actualday
-// }
 if (day == '' || month == '' || year == '') { // Day
     result[2].innerHTML = '--'
 } else if ([1,3,5,7,8,10,12].includes(month)) { //31
-    var first = result[2].innerHTML = (31 - day) + actualday
+    result[2].innerHTML = (31 - day) + actualday
 } else if ([4,6,9,11].includes(month)) { //30
-    var second = result[2].innerHTML = (30 - day) + actualday
-} else {//fev
-    var third = result[2].innerHTML = (29 - day) + actualday
+    result[2].innerHTML = (30 - day) + actualday
+} else {//fev 29
+    result[2].innerHTML = (29 - day) + actualday
+}
+if (actualmonth == month && actualday == day) { //birth
+    var yearvalue = document.querySelectorAll('.result')[0]
+    var currentValue = Number(yearvalue.innerHTML)
+    var newValue = currentValue + 1;
+    yearvalue.innerHTML = newValue;
+    result[2].innerHTML = 0  
 }
 
-// if (first == 31 || second == 30 || third == 29) {
-//     result[0].innerHTML += 1
+
+//FAZER q A PARTIR DAQUI-----------------------------------------------------
+
+// acrescentar 
+// 1- caso natalia que sao 31 dias  tem que somar com month +1
+// 2- 1 dia anterior ao actual day da erro e ele nao calcula (fazer um if para casos em que o niv ja passou e estamos no mesmo mesmo
+
+// )
+// if ([1,3,5,7,8,10,12].includes(month) == ) { //31
+//     var monthvalue
+// } else if ([4,6,9,11].includes(month)) {//30
+    
+// } else {
+    
 // } 
 }
