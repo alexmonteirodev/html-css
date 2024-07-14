@@ -79,54 +79,85 @@ if (year <= 0 || year > actualyear) {
     label[2].innerHTML = 'Year'
     // result[0].innerHTML = (actualyear-1) - year
 }
+
+var yearresult = result[0].innerHTML
 if (day == '' || month == '' || year == '') { // YEAR
-    result[0].innerHTML = '--'
+    yearresult = '--'
+    result[0].innerHTML = yearresult
 } else if (actualday < day && actualmonth > month) {
-    result[0].innerHTML = actualyear - year
+    yearresult = actualyear - year
+    result[0].innerHTML = yearresult
 } else {
-    result[0].innerHTML = (actualyear - year) - 1
+    yearresult = (actualyear - year) - 1
+    result[0].innerHTML = yearresult
 }
 
+var monthresult = result[1].innerHTML
 if (day == '' || month == '' || year == '') { // MONTH
-    result[1].innerHTML = '--'
+    monthresult = '--'
+    result[1].innerHTML = monthresult
 } else if (month == actualmonth) {
-    result[1].innerHTML = 0
+    monthresult = 0
+    result[1].innerHTML = monthresult
 } else if (actualmonth < month) {
-    result[1].innerHTML = (12 - month) + (actualmonth - 1)
+    monthresult = (12 - month) + (actualmonth - 1)
+    result[1].innerHTML = monthresult
 } else {//fez niv
-    result[1].innerHTML = (actualmonth - month) -1
+    monthresult = (actualmonth - month) -1
+    result[1].innerHTML = monthresult
 }
 
+var dayresult = result[2].innerHTML 
 if (day == '' || month == '' || year == '') { // Day
-    result[2].innerHTML = '--'
+    dayresult = '--'
+    result[2].innerHTML = dayresult
 } else if ([1,3,5,7,8,10,12].includes(month)) { //31
-    result[2].innerHTML = (31 - day) + actualday
+    dayresult = (31 - day) + actualday
+    result[2].innerHTML = dayresult
 } else if ([4,6,9,11].includes(month)) { //30
-    result[2].innerHTML = (30 - day) + actualday
+    dayresult = (30 - day) + actualday
+    result[2].innerHTML = dayresult
 } else {//fev 29
-    result[2].innerHTML = (29 - day) + actualday
+    dayresult = (29 - day) + actualday
+    result[2].innerHTML = dayresult
 }
+
+if (dayresult>=31) {
+    result[2].innerHTML = actualday - day
+    result[1].innerHTML = monthresult +1
+    result[0].innerHTML = yearresult +1
+}
+
 if (actualmonth == month && actualday == day) { //birth
     var yearvalue = document.querySelectorAll('.result')[0]
     var currentValue = Number(yearvalue.innerHTML)
     var newValue = currentValue + 1;
-    yearvalue.innerHTML = newValue;
+    yearvalue.innerHTML = newValue -1;
+    result[0].innerHTML = yearvalue.innerHTML
+    result[1].innerHTML = 0  
     result[2].innerHTML = 0  
 }
 
+if (day < actualday && actualmonth == month) {
+    result[1].innerHTML = 0
+} 
+
+}
+// APARTIR DE AQUI
 
 //FAZER q A PARTIR DAQUI-----------------------------------------------------
 
 // acrescentar 
 // 1- caso natalia que sao 31 dias  tem que somar com month +1
-// 2- 1 dia anterior ao actual day da erro e ele nao calcula (fazer um if para casos em que o niv ja passou e estamos no mesmo mesmo
+// 2- 1 dia anterior ao actual day da erro e ele nao calcula (fazer um if para casos em que o niv ja passou e estamos no mesmo mesmo)
 
-// )
-// if ([1,3,5,7,8,10,12].includes(month) == ) { //31
-//     var monthvalue
+
+// if ([1,3,5,7,8,10,12].includes(month) && calc31>=31 ) { //31
+//     result[2].innerHTML = calc30
+//     result[2].innerHTML = calc30
 // } else if ([4,6,9,11].includes(month)) {//30
     
 // } else {
     
 // } 
-}
+
