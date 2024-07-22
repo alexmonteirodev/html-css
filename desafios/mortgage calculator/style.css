@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --azulclaro: #E3F5FC;
+    --verde: #DADB31;
+    --azulescuro: #123041;
+    --label: #556D75;
+}
+body{
+    background-color: var(--azulclaro);
+}
+#divmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+#section1{
+    background-color: red;
+}
+#section2{
+    background-color: blue;
+}
