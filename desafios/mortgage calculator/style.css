@@ -79,22 +79,48 @@ h1{
     flex-direction: column;
     gap: 10px;
 }
-.inputicon{
+#divicon{
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
 }
-.input-icon{
+#input-icon{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     margin-left: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: var(--azulclaro);
     border-right: 1px solid var(--label);
     height: 40px;
     border-radius: 5px 0px 0px 5px
+}
+.divicon2{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.input-icon2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--azulclaro);
+    border-left: 1px solid var(--label);
+    height: 40px;
+    border-radius: 0px 5px 5px 0px
+}
+span{
+    font-weight: bold;
+    color: var(--label);
 }
 label{
     color: var(--label);
@@ -106,7 +132,7 @@ label{
     text-align: center;
     font-weight: bold;
     width: 100%; /*para ocupar todo o espaço disponivel*/
-    font-size: ;
+    font-size: 1em;
     color: var(--azulescuro);
 }
 #div2{
