@@ -30,7 +30,7 @@ header{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.188);
     border-radius: 15px 0px 0px 15px;
     height: 430px;
-    padding-right: 100px; /*sobrepor a direita do radius*/
+    padding-right: 20px; /*sobrepor a direita do radius*/
 }
 #section2{
     background-color: var(--azulescuro);
@@ -43,7 +43,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-left: -70px; /*sobrepor a esquerda do radius*/
+    margin-left: -75px; /*sobrepor a esquerda do radius*/
 }
 h2{
     color: var(--white);
@@ -83,18 +83,18 @@ h1{
     display: flex;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 #input-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     margin-left: 1px;
     padding-left: 15px;
     padding-right: 15px;
     background-color: var(--azulclaro);
-    border-right: 1px solid var(--label);
+    border: 1px solid var(--label);
+    border-right: #FFFFFF;
     height: 40px;
     border-radius: 5px 0px 0px 5px
 }
@@ -103,20 +103,45 @@ h1{
     align-items: center;
     position: relative;
     flex-direction: row-reverse;
-    width: 100%;
+    justify-content: flex-start;
+    width: 60%;
 }
 .input-icon2{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     margin-right: 1px;
     padding-left: 15px;
     padding-right: 15px;
     background-color: var(--azulclaro);
-    border-left: 1px solid var(--label);
+    border: 1px solid var(--label);
+    border-left: #FFFFFF;
     height: 40px;
     border-radius: 0px 5px 5px 0px
+}
+.input{
+    border: 1px solid var(--label);
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    text-align: left;
+    font-weight: bold;
+    width: 100%; /*para ocupar todo o espaço disponivel*/
+    font-size: 1em;
+    color: var(--azulescuro);
+    padding-left: 10px;
+}
+.input2{
+    border: 1px solid var(--label);
+    border-right: #FFFFFF;
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    text-align: left;
+    font-weight: bold;
+    width: 100%; /*para ocupar todo o espaço disponivel*/
+    font-size: 1em;
+    color: var(--azulescuro);
+    padding-left: 10px;
 }
 span{
     font-weight: bold;
@@ -124,16 +149,6 @@ span{
 }
 label{
     color: var(--label);
-}
-.input{
-    border: 1px solid var(--label);
-    border-radius: 5px;
-    height: 40px;
-    text-align: center;
-    font-weight: bold;
-    width: 100%; /*para ocupar todo o espaço disponivel*/
-    font-size: 1em;
-    color: var(--azulescuro);
 }
 #div2{
     display: flex;
@@ -164,6 +179,7 @@ form{
     gap: 10px;
     padding-left: 10px;
     margin-top: 10px;
+    width: 80%;
 }
 #calbtn{
     display: flex;
