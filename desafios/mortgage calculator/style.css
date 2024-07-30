@@ -30,7 +30,7 @@ header{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.188);
     border-radius: 15px 0px 0px 15px;
     height: 430px;
-    padding-right: 20px; /*sobrepor a direita do radius*/
+    padding-right: 10px; /*sobrepor a direita do radius*/
 }
 #section2{
     background-color: var(--azulescuro);
@@ -202,4 +202,45 @@ form{
 #div4{
     display: flex;
     justify-content: center;
+    width: 80%;
+}
+@media(max-width: 450px){ /*phone*/
+    header{
+        margin-bottom: 0px;
+    }
+    #divmain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+    #div1{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    #clearbutton{
+        text-align: left;
+    }
+    #section1{
+        background-color: var(--white);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.188);
+        height: 450px;
+        margin: auto;
+        border-radius: 0px;
+    }
+    #section2{
+        background-color: var(--azulescuro);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.188);
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        border-radius: 0px;
+        margin: auto;
+
+    }
 }
