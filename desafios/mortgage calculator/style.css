@@ -32,7 +32,7 @@ header{
     height: 430px;
     padding-right: 10px; /*sobrepor a direita do radius*/
 }
-#section2{
+#res{
     background-color: var(--azulescuro);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.188);
     padding: 30px;
