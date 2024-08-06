@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ @charset "UTF-8";
 *{
     margin: 0px;
     padding: 0px;
@@ -180,6 +180,24 @@ form{
     padding-left: 10px;
     margin-top: 10px;
     width: 80%;
+}
+.radioinput{
+    width: 15px;
+    height: 15px;
+    appearance: none; /* tira a aparencia padrao do checkbox quadrado*/
+    background-color: #fff;
+    border: 1px solid var(--azulescuro);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.radioinput:checked{
+    width: 15px;
+    height: 15px;
+    appearance: none; /* tira a aparencia padrao do checkbox quadrado*/
+    background-color: var(--verde);
+    border: 1px solid var(--azulescuro);
+    border-radius: 50%;
+    cursor: pointer;
 }
 #calbtn{
     display: flex;
