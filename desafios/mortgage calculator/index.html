@@ -20,8 +20,8 @@
                 <div id="div3">
                     <label for="">Mortgage Type</label>
                     <form>
-                        <div class="inputradio"><input class="radioinput" type="checkbox" value="opt1">Repayment</div> <!--input radio nao permite marcar e desmarcar e o checkbox sim, basta mudar o css para parecer com o radio-->
-                        <div class="inputradio"><input class="radioinput" type="checkbox" value="opt2">Interest Only</div>
+                        <div class="inputradio"><input class="radioinput" type="radio" value="opt1" name="option">Repayment</div> <!--input radio nao permite marcar e desmarcar e o checkbox sim, basta mudar o css para parecer com o radio. PORÉM... o radio quando tem o mesmo 'name' faz com que ao marcar uma opção, a outra seja desmarcada e é disso que é preciso nesse caso-->
+                        <div class="inputradio"><input class="radioinput" type="radio" value="opt2" name="option">Interest Only</div>
                     </form>
                 </div>
                 <div id="div4">
