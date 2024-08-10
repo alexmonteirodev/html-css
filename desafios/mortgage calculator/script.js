@@ -5,6 +5,12 @@ var interestrateinput = document.getElementById('interestrateinput')
 var radioinput = document.getElementsByClassName('radioinput')
 var repaydiv = document.getElementsByClassName('inputradio')[0]
 var intrstdiv = document.getElementsByClassName('inputradio')[1]
+var button = document.getElementById('calbtn')
+var h2 = document.getElementById('title')
+var p = document.getElementById('p')
+var img = document.getElementById('img')
+var resdiv = document.getElementById('res')
+
 
 clearbutton.addEventListener('click', clear)
 function clear(params) { //clear button
@@ -15,13 +21,15 @@ function clear(params) { //clear button
     repaydiv.style.border = '1px solid var(--azulescuro)'
     intrstdiv.style.background = '#FFFFFF';
     intrstdiv.style.border = '1px solid var(--azulescuro)';
+    resdiv.style.display = 'none'
+    //adicionar a img ao clicar no clear
     for (let i = 0; i < radioinput.length; i++) {
         radioinput[i].checked = false
     }
 }
 
 
-for (let i = 0; i < radioinput.length; i++) { //mortgage type input
+for (let i = 0; i < radioinput.length; i++) { //mortgage type inputs style
     radioinput[i].addEventListener('click',radioinpt)
 }
 function radioinpt(params) { 
@@ -38,3 +46,11 @@ function radioinpt(params) {
     }
     }
 
+button.addEventListener('click', calculate)
+function calculate(params) {
+    h2.innerHTML = 'Your results'
+    p.innerHTML = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.'
+    img.remove()
+    resdiv.style.display = 'block'
+
+}
