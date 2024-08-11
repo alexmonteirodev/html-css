@@ -10,6 +10,7 @@ var h2 = document.getElementById('title')
 var p = document.getElementById('p')
 var img = document.getElementById('img')
 var resdiv = document.getElementById('res')
+var h3 = document.getElementById('resgreen')
 
 
 clearbutton.addEventListener('click', clear)
@@ -46,11 +47,19 @@ function radioinpt(params) {
     }
     }
 
-button.addEventListener('click', calculate)
+
+button.addEventListener('click', calculate) //calculate button & result box
 function calculate(params) {
     h2.innerHTML = 'Your results'
     p.innerHTML = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.'
     img.remove()
     resdiv.style.display = 'block'
 
+    if (mortgageinput.value > 0 && mortgageterminput.value > 0 && interestrateinput.value > 0 && radioinput[0].checked ) { // Repayment
+        window.alert('deu bom')
+        var r = interestrateinput.value/12
+        h3.innerHTML = (mortgageinput.value * r * (1 + r)**300) / ((1 + r)**300 - 1) // CONTINUAR DAQUI-----
+    }  else { // validation
+        window.alert('deu ruim')
+    }
 }
