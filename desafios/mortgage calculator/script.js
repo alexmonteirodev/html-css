@@ -48,7 +48,7 @@ function radioinpt(params) {
     }
 
 
-button.addEventListener('click', calculate) //calculate button & result box
+button.addEventListener('click', calculate) //calculate button & result box & validation
 function calculate(params) {
     h2.innerHTML = 'Your results'
     p.innerHTML = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.'
