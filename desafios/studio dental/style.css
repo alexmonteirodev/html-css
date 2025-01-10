@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+IN:wght@100..400&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+IN:wght@100..400&family=Poppins&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    margin: auto;
+    background-color: var(--black);
+}
+:root{
+    --white: white;
+    --black: black;
+    --fina: "Noto Serif", serif;
+
+}
+/* .text-animation{
+    animation: typing 6s steps(80),
+                cursor .5s step-end infinite alternate;
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 25px; 
+}
+@keyframes cursor {
+    50%{border-color: transparent;}
+}
+@keyframes typing {
+    from {width: 0px;}
+} */
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-top: 2vh;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--white);
+    border-bottom: 2px solid black;
+    transition: color 0.4s, border-bottom 0.4s;
+}
+nav a:hover{
+    border-bottom: 2px solid white;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+nav img{
+    width: 20px;
+    height: 20px;
+}
+#languages{
+    display: flex;
+    gap: 15px;
+}
+#languages a{
+    border: none;
+}
+/* section 1 */
+#section1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+h1{
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 50px;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+
+}
+hr{
+    width: 80%;
+    margin-top: 200px;
+    height: 1px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p{
+    position: absolute;
+    color: white;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: light;
+    background-color: transparent;
+    font-family: "Playwrite IN", serif;
+}
+#presentation{
+    display: flex;
+    margin-top: 20px;
+}
+#protese{
+    width: 100%; 
+    height: 100%; 
+  /* object-fit: cover; */
+}
+#section1 h3{
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    top: 87%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-family: "Rajdhani", serif;
+    font-weight: 300;
+}
