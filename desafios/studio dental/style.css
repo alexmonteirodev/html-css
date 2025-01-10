@@ -95,18 +95,19 @@ hr{
     top: 2%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 10px 1px rgba(252, 251, 251, 0.593);
 }
 p{
     position: absolute;
     color: white;
     top: 32%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 35%;
     text-align: center;
     font-size: 1.5rem;
     font-weight: light;
     background-color: transparent;
     font-family: "Playwrite IN", serif;
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
 }
 #presentation{
     display: flex;
@@ -114,17 +115,32 @@ p{
 }
 #protese{
     width: 100%; 
-    height: 100%; 
-  /* object-fit: cover; */
+    height: 95vh; 
+  object-fit: cover;
 }
 #section1 h3{
     position: absolute;
     color: white;
     background-color: transparent;
-    top: 87%;
+    top: 90%;
     left: 18%;
-    transform: translate(-50%, -50%);
     font-size: 1.5rem;
     font-family: "Rajdhani", serif;
     font-weight: 300;
+}
+
+
+/* animacoes js */
+
+.js-scroll{ 
+    /* não usou display:none pq se não o elemento seria adicinado na tela e ela daria um pulo, já com o trnasform o elemento já está na tela e por isso não pula, porque ele não é adicionado com o block*/
+    opacity: 0;
+    /* transform: translate3d(-50%, -50%,-50px); */
+    transform: translateY(-50px); /* Elemento começa 50px acima */
+    transition: 1.3s;
+}
+.js-scroll.ativo{
+    opacity: 1; /* opacidade faz o elemento sumir e aparecer */
+    transform: translateY(0); /* Elemento retorna para a posição original */
+
 }
