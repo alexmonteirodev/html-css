@@ -20,3 +20,15 @@ function initAnimacaoScroll() {
     }
 }
 initAnimacaoScroll()
+
+
+
+//animação slogan
+
+const p = document.querySelector('.text-animation')
+function initAnimaP() {
+    setInterval(() => {
+        p.classList.add('active')
+    },1500)
+}
+initAnimaP()

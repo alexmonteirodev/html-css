@@ -92,8 +92,8 @@ hr{
     border: none;
     background-color: white;
     position: absolute;
-    top: 2%;
-    left: 50%;
+    top: 0%;
+    left: 10%;
     transform: translate(-50%, -50%);
     box-shadow: 1px 1px 10px 1px rgba(252, 251, 251, 0.593);
 }
@@ -101,13 +101,19 @@ p{
     position: absolute;
     color: white;
     top: 32%;
-    left: 35%;
+    left: 50%;
     text-align: center;
     font-size: 1.5rem;
     font-weight: light;
     background-color: transparent;
     font-family: "Playwrite IN", serif;
-    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    transform: translate(-50%, -50%); /*Ajusta para o centro exato */
+    opacity: 0;
+}
+
+.active{
+    opacity: 1;
+    transition: 1.3s;
 }
 #presentation{
     display: flex;
@@ -136,7 +142,7 @@ p{
     /* não usou display:none pq se não o elemento seria adicinado na tela e ela daria um pulo, já com o trnasform o elemento já está na tela e por isso não pula, porque ele não é adicionado com o block*/
     opacity: 0;
     /* transform: translate3d(-50%, -50%,-50px); */
-    transform: translateY(-50px); /* Elemento começa 50px acima */
+    transform: translateY(50px); /* Elemento começa 50px acima */
     transition: 1.3s;
 }
 .js-scroll.ativo{
