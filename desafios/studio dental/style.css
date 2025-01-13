@@ -10,6 +10,7 @@
 :root{
     --white: white;
     --black: black;
+    --cinza: gray;
     --fina: "Noto Serif", serif;
 
 }
@@ -71,7 +72,6 @@ nav img{
     width: 100%;
     height: auto;
     position: relative;
-
 }
 h1{
     text-align: center;
@@ -83,7 +83,6 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-
 }
 hr{
     width: 80%;
@@ -122,7 +121,7 @@ p{
 #protese{
     width: 100%; 
     height: 95vh; 
-  object-fit: cover;
+    object-fit: cover;
 }
 #section1 h3{
     position: absolute;
@@ -134,7 +133,6 @@ p{
     font-family: "Rajdhani", serif;
     font-weight: 300;
 }
-
 
 /* animacoes js */
 
@@ -150,3 +148,62 @@ p{
     transform: translateY(0); /* Elemento retorna para a posição original */
 
 }
+
+/* section2 */
+#section2{
+
+}
+#section2 h2{
+    font-size: 5rem;
+    color: var(--white);
+    text-align: center;
+    margin-top: 5rem;
+}
+.case-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+.casos p{
+    color: var(--white);
+    background-color: white;
+}
+.divisao-casos{
+    height: 500px;
+    width: 1px;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(252, 251, 251, 0.593);
+}
+.casos{
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+.ver-mais-container{
+    display: flex;
+    justify-content: center;
+}
+.ver-mais{
+    background-color: var(--white);
+    margin: auto;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.ver-mais:hover{
+    background-color: var(--black);
+    margin: auto;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    font-style: italic;
+}
+
