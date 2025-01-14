@@ -166,6 +166,7 @@ h2{
     display: flex;
     justify-content: space-around;
     gap: 100px;
+    /* width: 80%;a ver  */
 }
 .casos p{
     color: var(--white);
